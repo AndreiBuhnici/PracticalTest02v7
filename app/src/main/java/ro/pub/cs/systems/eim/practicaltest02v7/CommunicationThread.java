@@ -59,6 +59,7 @@ public class CommunicationThread extends Thread {
                 if (alarmInformation == null) {
                     Log.d("PracticalTest02", "[COMMUNICATION THREAD] No alarm set for this client!");
                     printWriter.println("none");
+                    socket.close();
                     return;
                 }
                 Log.d("PracticalTest02", "[COMMUNICATION THREAD] Alarm set for " + alarmInformation.hour + ":" + alarmInformation.minute + "!");
